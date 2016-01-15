@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript I</title>
+	</head>
+	<body>
+		<p id="output"></p>
+		<script>
+		
+			// 	Das ist ein einzeiliger Kommentar
+			/* 	Das ist ein
+				mehrzeiliger Kommentar */
+			
+			var variablenname = "Wert"; // Variablen werden mit einem vorangestellten 'var' gekennzeichnet und erhalten über das Gleichheitszeichen einen Wert 
+			meinText = "Das ist ein String";
+			
+			var a = 4; // Number, int
+			var b = "Text"; // String (Textvariable)
+			var c = ["Text1", "Text2", "Text3", 41.5, b]; // Array (Liste)
+			var d = true; // od. false (Booleesche Werte)
+			var e = { 
+			
+				// Eigenschaften
+				firstname:"Vorname", 
+				lastname:"Nachname",
+				
+				// Methoden
+				fullName:function(){
+					return e.firstname + " " + e.lastname;
+				}
+			}; // Objekt 
+			/* var sqrt = function () {
+				return 6 * 6;
+			} */
+			function sqrt(x) {
+				if(typeof(x) != 'number'){
+					return x * x;
+				} else {
+					return "Der übergebene Wert war keine Zahl!";
+				}
+			}
+			
+			a = 'jetzt steht hier ein "Text"';
+			var a1, a2, a3, a4;
+			a1 = "Inhalt1";
+			a2 = "Inhalt2";
+			a3 = a1 + a2;
+			
+			var a1 = ""; // Fehler, diese Variable wurde bereits vorher angelegt	
+
+			var zielElement = "output";
+			
+			
+			// Ausgabemethoden 
+			
+			// alert(a);  Öffnet ein Hinweisfenster im Browser
+			console.log(sqrt('text')); // Gibt einen Wert in der Entwicklungsumgebung des Browsers aus
+			// document.getElementById(zielElement).innerHTML = b; Gibt den Variablenwert innerhalb eines HTML-Elementes direkt im Browser aus
+			
+			console.log(fullName());
+			
+		</script>
+	</body>
+</html>
